@@ -39,7 +39,7 @@
 		private function fillAssessment(){			
 			for ($i=0; $i < $this->exerciseAmount ; $i++) {
 				$excersice = array(
-							"exercise".$i => ""
+							"exercise".$i => $this->exerciseCreator->makeExcercise($this->assessment->getSkill())
 				);
 				
 			}

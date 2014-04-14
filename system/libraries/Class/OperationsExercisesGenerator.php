@@ -24,6 +24,8 @@
 					$this->exercise = array_merge($this->exercise,$arrayResult);
 				}
 				
+				return $this->exercise;
+				
 
 		}
 		
