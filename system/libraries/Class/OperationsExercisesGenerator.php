@@ -20,7 +20,8 @@
 								"b" => $value2
 				);
 				if($skill == 1){
-					$this->exercise = array_merge()
+					$arrayResult = $this->addition($this->exercise);
+					$this->exercise = array_merge($this->exercise,$arrayResult);
 				}
 				
 
@@ -28,7 +29,7 @@
 		
 		function addition($arrayData){
 			$result  = array(
-				"result" => array_sum($arrayData);
+				"result" => array_sum($arrayData)
 			);			
 			return $result;
 		}
