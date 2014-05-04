@@ -36,13 +36,13 @@
 		public function getAssesment(){
 			return $this->assessment;
 		}
-		private function fillAssessment(){			
+		private function fillAssessment(){
+			$excersice = array();			
 			for ($i=0; $i < $this->exerciseAmount ; $i++) {
-				$excersice = array(
-							"exercise".$i => $this->exerciseCreator->makeExcercise($this->assessment->getSkill())
-				);
-				
+				$excersice["exercise".$i] = $this->exerciseCreator->makeExcercise($this->assessment->getSkill());		
 			}
+			
+			$this->assessment->setContent($excersice);
 		}
 		
 	}
