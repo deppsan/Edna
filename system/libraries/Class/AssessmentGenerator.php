@@ -7,7 +7,7 @@
 	 * Modified by	: Ricardo Alberto Chi García
 	 * Last UpDate	: April 4 2014
 	 */
-	 include("OperationsExercisesGenerator.php");
+	include("OperationsExercisesGenerator.php");
 	class AssessmentGenerator extends Assessment{
 		
 		private $assessment;
@@ -36,6 +36,10 @@
 		public function getAssesment(){
 			return $this->assessment;
 		}
+		
+		/**
+		 * Fill an assesment with an amount of excersice
+		 */
 		private function fillAssessment(){
 			$excersice = array();			
 			for ($i=0; $i < $this->exerciseAmount ; $i++) {
