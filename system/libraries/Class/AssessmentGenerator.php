@@ -8,7 +8,8 @@
 	 * Last UpDate	: April 4 2014
 	 */
 	include("OperationsExercisesGenerator.php");
-	class AssessmentGenerator extends Assessment{
+	include("Assessment.php");
+	class AssessmentGenerator{
 		
 		private $assessment;
 		private $exerciseAmount;
@@ -18,15 +19,15 @@
 		/*
 		 * Class Constructor.
 		 * */
-		public function AssessmentGenerator($type,$skill,$exerciseAmount,$assessmentDuration,$numberLong){
-			$this->assessment 		=	new Assessment($type, $assessmentDuration, $skill);
-			$this->exerciseAmount 	=	$exerciseAmount;
-			$this->numberLong		=	$numberLong;
+		public function AssessmentGenerator($data){
+			$this->assessment 		=	new Assessment($data['type'], $data['assessmentDuration'], $data['skill']);
+			$this->exerciseAmount 	=	$data['exerciseAmount'];
+			$this->numberLong		=	$data['numberLong'];
 			
-			if($skill == 1 OR $skill == 2 OR $skill == 3 OR $skill == 4){
-				$this->exerciseCreator	=	new OperationsExercisesGenerator($numberLong);
+			if($data['skill'] == 1 OR $data['skill'] == 2 OR $data['skill'] == 3 OR $data['skill'] == 4){
+				$this->exerciseCreator	=	new OperationsExercisesGenerator($data['numberLong']);
 			}else{
-				
+				//Hace otra clase de ejercicios
 			}
 		}
 		
@@ -40,12 +41,12 @@
 		/**
 		 * Fill an assesment with an amount of excersice
 		 */
-		private function fillAssessment(){
+		public function fillAssessment(){
 			$excersice = array();			
 			for ($i=0; $i < $this->exerciseAmount ; $i++) {
 				$excersice["exercise".$i] = $this->exerciseCreator->makeExcercise($this->assessment->getSkill());		
 			}
-			
+			print_r($excersice);
 			$this->assessment->setContent($excersice);
 		}
 		

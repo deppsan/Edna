@@ -16,9 +16,6 @@
 			$this->assasmentDuration =	$paramAssessmentDuration;
 			$this->skill 			 =	$paramSkill;
 		}
-		public function Assessment(){
-			
-		}
 		
 		public function getType(){
 			return $this->type ;
