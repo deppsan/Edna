@@ -19,6 +19,7 @@
 		 * 3 = Multiplicacion
 		 * 4 = Division
 		 */
+		 
 		public function makeExcercise($skill){
 				$value1 = $this->numberGenerator->generar($this->numberLenght);
 				$value2 = $this->numberGenerator->generar($this->numberLenght);
