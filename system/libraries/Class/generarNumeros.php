@@ -7,7 +7,7 @@
 	 */
 	class GenerarNumeros{
 		
-		private $numero;
+		private $numero = 1;
 		
 		/**
 		 * Class constructor
@@ -19,26 +19,42 @@
 		 * Generate a number at random, the lenght of the number depend of the value of $amountDigit
 		 * variable
 		 */
-		public static function generar($amountDigit){
+		public function generar($amountDigit){
 			if($amountDigit == 1){
 				
-				$this->numero = rand(1,9);
+				$number = rand(1,9);
+				$this->setNumero($number);
 				
 			}elseif($amountDigit == 2){
 				
-				$this->numero = rand(1,99);
+				$number = rand(1,99);
+				$this->setNumero($number);
+				
 				
 			}elseif($amountDigit == 3){
 				
-				$this->numero = rand(1,999);
+				$number = rand(1,999);
+				$this->setNumero($number);
 				
 			}elseif($amountDigit == 4){
 				
-				$this->numero = rand(1,9999);
+				$number = rand(1,9999);
+				$this->setNumero($number);
+				
 				
 			}
-			return $this->numero;
+			$numeroRegreso = $this->getNumero();
+			
+			return $numeroRegreso;
 		} 
+		
+		public function setNumero($numero){
+			$this->numero = $numero;
+		}
+		
+		public function getNumero(){
+			return $this->numero;
+		}
 	}
 
 

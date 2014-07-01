@@ -46,6 +46,13 @@
 			for ($i=0; $i < $this->exerciseAmount ; $i++) {
 				$excersice["exercise".$i] = $this->exerciseCreator->makeExcercise($this->assessment->getSkill());		
 			}
+			
+			$output = array();
+			foreach($excersice as $v) {
+				$output[key($v)] = current($v);
+			}
+			echo json_encode($output, 128);
+			
 			print_r($excersice);
 			$this->assessment->setContent($excersice);
 		}
