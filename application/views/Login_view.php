@@ -12,7 +12,7 @@
 	</head>
 	<body>
 		
-		<a href="<?php echo base_url().'assessment_controller.php' ?>">
+		<a href="<?php echo base_url().'assesment_controller.php' ?>">
 			Link
 		</a>
 		
