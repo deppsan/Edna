@@ -44,16 +44,15 @@
 		public function fillAssessment(){
 			$excersice = array();			
 			for ($i=0; $i < $this->exerciseAmount ; $i++) {
-				$excersice["exercise".$i] = $this->exerciseCreator->makeExcercise($this->assessment->getSkill());		
+				$excersice[$i] = $this->exerciseCreator->makeExcercise($this->assessment->getSkill());		
 			}
 			
-			$output = array();
-			foreach($excersice as $v) {
-				$output[key($v)] = current($v);
-			}
-			echo json_encode($output, 128);
+			$json_encode = json_encode($excersice);
 			
-			print_r($excersice);
+			/*echo $json_encode;
+			echo "<br/>";
+			print_r($excersice);*/
+			
 			$this->assessment->setContent($excersice);
 		}
 		

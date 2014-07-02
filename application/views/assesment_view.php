@@ -10,7 +10,7 @@
 		<title>assesment_view</title>
 		<meta name="description" content="">
 		<meta name="author" content="Medivh">
-
+		
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
@@ -33,7 +33,15 @@
 			</nav>
 
 			<div>
-
+				<a href="#a240e92d" class="sublime">
+				  <img src="https://cdn.sublimevideo.net/vpa/ms_192.jpg" width="192" height="108" />
+				</a>
+				<video id="a240e92d" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="640" height="360" title="Midnight Sun" style="display:none" data-uid="a240e92d" preload="none">
+				  <source src="https://cdn.sublimevideo.net/vpa/ms_360p.mp4" />
+				  <source src="https://cdn.sublimevideo.net/vpa/ms_720p.mp4" data-quality="hd" />
+				  <source src="https://cdn.sublimevideo.net/vpa/ms_360p.webm" />
+				  <source src="https://cdn.sublimevideo.net/vpa/ms_720p.webm" data-quality="hd" />
+				</video>
 			</div>
 
 			<footer>
@@ -43,4 +51,5 @@
 			</footer>
 		</div>
 	</body>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/dqmydva2.js"></script>
 </html>
