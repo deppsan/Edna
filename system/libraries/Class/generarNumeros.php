@@ -20,32 +20,38 @@
 		 * variable
 		 */
 		public function generar($amountDigit){
-			if($amountDigit == 1){
-				
-				$number = rand(1,9);
-				$this->setNumero($number);
-				
-			}elseif($amountDigit == 2){
-				
-				$number = rand(1,99);
-				$this->setNumero($number);
-				
-				
-			}elseif($amountDigit == 3){
-				
-				$number = rand(1,999);
-				$this->setNumero($number);
-				
-			}elseif($amountDigit == 4){
-				
-				$number = rand(1,9999);
-				$this->setNumero($number);
-				
-				
-			}
-			$numeroRegreso = $this->getNumero();
 			
-			return $numeroRegreso;
+			try{
+				if($amountDigit == 1){
+				
+					$number = rand(1,9);
+					$this->setNumero($number);
+					
+				}elseif($amountDigit == 2){
+					
+					$number = rand(1,99);
+					$this->setNumero($number);
+					
+					
+				}elseif($amountDigit == 3){
+					
+					$number = rand(1,999);
+					$this->setNumero($number);
+					
+				}elseif($amountDigit == 4){
+					
+					$number = rand(1,9999);
+					$this->setNumero($number);
+					
+					
+				}
+				$numeroRegreso = $this->getNumero();
+				
+				return $numeroRegreso;
+			}catch (Exception $e){
+				return FALSE;
+			}
+			
 		} 
 		
 		public function setNumero($numero){

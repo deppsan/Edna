@@ -16,12 +16,15 @@
 			$data['exerciseAmount']		=	5;
 			$data['assessmentDuration']	=	"5";
 			$data['numberLong']			=	1;
-
+			
 			$this->load->library('class/AssessmentGenerator',$data,'generator');
 			
-			$this->generator->fillAssessment();
-		
-			$this->load->view('assesment_view');
+			
+			$this->load->view('assesment_view_header');
+			$this->load->view('assesment_view_sidebar');
+			$this->load->view('assesment_view_content');
+			$this->load->view('assesment_view_footer');
+			
 		}
     }
     
