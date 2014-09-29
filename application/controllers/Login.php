@@ -12,6 +12,7 @@
 		function index(){
 			$this->load->view('Login_view');
 		}
-    }
+		
+   }
     
 ?>
