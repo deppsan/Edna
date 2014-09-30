@@ -17,6 +17,8 @@
 			
 			if($username == "maestro" && $password == "maestro1234"){				
 				redirect(base_url()."index.php/assesment_controller");
+			}elseif($username == "estudiante" && $password == "estudiante1234"){							
+				redirect(base_url()."index.php/student_dashboard_controller");
 			}
 		}
     }

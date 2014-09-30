@@ -39,7 +39,7 @@
 	</div>
 	<div class="content">
 		<!-- BEGIN LOGIN FORM -->
-		<form class="login-form" action="<?php echo base_url()?>index.php/logon_controller/validar" method="post">
+		<form class="login-form" action="<?php echo site_url('index.php/logon_controller/validar')?>" method="post">
 			<h3 class="form-title">Login to your account</h3>
 			<div class="alert alert-danger display-hide">
 				<button class="close" data-close="alert"></button>
