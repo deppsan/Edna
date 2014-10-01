@@ -29,5 +29,19 @@
 			}
 			
 		}
+		
+		public function coreValidacion(){
+			$data['txtUserName']= $this->input->post('username');
+			$data['txtPassword']= $this->input->post('password');
+			
+			$validacion = $this->login_model->validarUsuario($data);
+			print_r($validacion);
+			header('Content-Type: application/json');
+			if(!$validacion){
+				echo json_encode(array('validacion' => false));
+			}else{
+				echo json_encode(array('validacion' => true));
+			}
+		}
     }
 ?>

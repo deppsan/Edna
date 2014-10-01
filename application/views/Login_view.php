@@ -28,6 +28,7 @@
 		<link href="<?php echo base_url();?>assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
 		<link id="style_color" href="<?php echo base_url();?>assets/admin/layout/css/themes/default.css" rel="stylesheet" type="text/css"/>
 		<link href="<?php echo base_url();?>assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+		<link href="<?php echo base_url();?>assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css"/>
 
 		<!-- END THEME STYLES -->
 		<link rel="shortcut icon" href="favicon.ico"/>
@@ -39,7 +40,7 @@
 	</div>
 	<div class="content">
 		<!-- BEGIN LOGIN FORM -->
-		<form class="login-form" action="<?php echo site_url('index.php/logon_controller/validar')?>" method="post">
+		<form class="login-form" action="<?php echo site_url('index.php/logon_controller/validar')?>" method="post" id="frmLogin">
 			<h3 class="form-title">Login to your account</h3>
 			<div class="alert alert-danger display-hide">
 				<button class="close" data-close="alert"></button>
@@ -62,11 +63,11 @@
 				</div>
 			</div>
 			<div class="form-actions row">
-				<button type="submit" class="btn blue pull-right">
+				<a class="btn blue pull-right" id="lnkLogin" href="javascript:;">
 				Login <i class="m-icon-swapright m-icon-white"></i>
-				</button>
+				</a>
 			</div>
-			<?php if($error){echo '<div class="row alert alert-danger">Your user and/or password are incorrect, please validate.</div>';} ?>
+			<?php if($error){echo '<div class="row alert alert-danger" id="error">Your user and/or password are incorrect, please validate.</div>';}else{echo '<div class="row alert alert-danger" style="display:none;" id="error">Your user and/or password are incorrect, please validate.</div>';} ?>
 			<div class="login-options">
 				<h4>Or login with</h4>
 				<ul class="social-icons">
@@ -142,6 +143,9 @@
 	<script src="<?php echo base_url();?>assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
 	<script src="<?php echo base_url();?>assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
 	<script src="<?php echo base_url();?>assets/admin/pages/scripts/login-soft.js" type="text/javascript"></script>
+	<script src="<?php echo base_url();?>assets/global/plugins/bootstrap-toastr/toastr.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/functions.js" type="text/javascript"></script>
+	<script src="<?php echo base_url();?>assets/js/login.js" type="text/javascript"></script>
 
 	<!-- END PAGE LEVEL SCRIPTS -->
 	<script>
@@ -164,7 +168,7 @@
 	    }
 	    );
 	});
-
+	var urlBase = "<?php echo base_url() ?>";
 	</script>
 	<!-- END JAVASCRIPTS -->
 	
