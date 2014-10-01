@@ -3,7 +3,7 @@
         
         function __construct() {
             parent::__construct();
-			
+			$this->load->model('login_model');
         }
 		
 		public function index(){
@@ -12,14 +12,22 @@
 		}
 		
 		public function validar(){
-			$username = $_POST['txtUserName'];
-			$password = $_POST['txtPassword'];
+			//$username = $_POST['txtUserName'];
+			//$password = $_POST['txtPassword'];
 			
-			if($username == "maestro" && $password == "maestro1234"){				
+			$data = $this->input->post();
+			
+			$validacion = $this->login_model->validarUsuario($data);
+			if(!validacion){
+				redirect(base_url().'index.php/login/error/');
+			}elseif($validacion['type']=="teacher"){
 				redirect(base_url()."index.php/assesment_controller");
-			}elseif($username == "estudiante" && $password == "estudiante1234"){							
+			}elseif($validacion['type']=="student"){
 				redirect(base_url()."index.php/student_dashboard_controller");
+			}else{
+				redirect(base_url().'index.php/login/error/');
 			}
+			
 		}
     }
 ?>

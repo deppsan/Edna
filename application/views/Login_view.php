@@ -61,13 +61,12 @@
 					<input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="txtPassword" id="txtPassword"/>
 				</div>
 			</div>
-			<div class="form-actions">
-				<label class="checkbox">
-				<input type="checkbox" name="remember" value="1"/> Remember me </label>
+			<div class="form-actions row">
 				<button type="submit" class="btn blue pull-right">
 				Login <i class="m-icon-swapright m-icon-white"></i>
 				</button>
 			</div>
+			<?php if($error){echo '<div class="row alert alert-danger">Your user and/or password are incorrect, please validate.</div>';} ?>
 			<div class="login-options">
 				<h4>Or login with</h4>
 				<ul class="social-icons">
