@@ -20,7 +20,11 @@
 		 * Class Constructor.
 		 * */
 		public function AssessmentGenerator($data){
-			$this->assessment 		=	new Assessment($data['type'], $data['assessmentDuration'], $data['skill']);
+			$this->assessment 		=	new Assessment();
+			$this->assessment->setType($data['type']);
+			$this->assessment->setSkill($data['skill']);
+			$this->assessment->setAssessmentDuration($data['assessmentDuration']);
+			
 			$this->exerciseAmount 	=	$data['exerciseAmount'];
 			$this->numberLong		=	$data['numberLong'];
 			
@@ -47,13 +51,14 @@
 				$excersice[$i] = $this->exerciseCreator->makeExcercise($this->assessment->getSkill());		
 			}
 			
-			$json_encode = json_encode($excersice);
+			//$json_encode = json_encode($excersice);
 			
 			/*echo $json_encode;
 			echo "<br/>";
 			print_r($excersice);*/
 			
 			$this->assessment->setContent($excersice);
+			
 		}
 		
 	}

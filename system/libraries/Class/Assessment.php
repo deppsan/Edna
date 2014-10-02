@@ -3,7 +3,7 @@
 	 * Entity class that would be the template of the Assessments.
 	 * Creator		: Ricardo Alberto Chi García
 	 * Create Date	: April 3 2014
-	 * Last UpDate	: April 4 2014
+	 * Last UpDate	: September 30 2014
 	 */
 	class Assessment{
 		private $type;
@@ -15,6 +15,10 @@
 			$this->type	 			 = 	$paramType;
 			$this->assasmentDuration =	$paramAssessmentDuration;
 			$this->skill 			 =	$paramSkill;
+		}
+		
+		public function __construct(){
+		
 		}
 		
 		public function getType(){
