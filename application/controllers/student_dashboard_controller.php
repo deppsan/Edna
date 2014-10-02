@@ -29,8 +29,7 @@ class student_dashboard_controller extends CI_Controller {
 			
 			$assessment = new Assessment();
 			$assessment = $this->generator->getAssesment();
-			
-			//print_r($assessment);
+
 			$data['assessment'] = $assessment;
 			$this->load->view('assesment_view_header');
 			$this->load->view('assesment_view_sidebar');
