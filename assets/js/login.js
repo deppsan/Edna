@@ -1,6 +1,6 @@
 var validacion = false;
-var $txtUserName = $("#txtUserName");
-var $txtPassword = $("#txtPassword");
+var $txtUserName ;
+var $txtPassword ;
 $(document).ready(function(){	
 	$txtUserName = $("#txtUserName");
  	$txtPassword = $("#txtPassword");
@@ -8,6 +8,7 @@ $(document).ready(function(){
 		if(validacion){			
 		}else{
 			event.preventDefault();
+
 		}		
 	});
 	$("#lnkLogin").click(validar);	
@@ -20,7 +21,7 @@ $(document).keypress(function(tecla){
 });
 
 function validar(){
-	
+
 	
 	if($txtUserName.val() == "" || $txtUserName.val() == undefined || $txtUserName.val() == null){
 		if(!$txtUserName.parent().parent().hasClass('has-error')){
@@ -45,11 +46,12 @@ function validar(){
 
 function coreValidacion(paramUsername, paramPassword){
 	$.ajax({
-		type	: 'post',
-		url		: urlBase+"index.php/logon_controller/coreValidacion",
-		data	: 'username='+paramUsername+'&password='+paramPassword,
-		data	: 'json',
-		success : function(res){
+		type	    : 'POST',
+        url		    : urlBase+"index.php/logon_controller/coreValidacion",
+        data	    : 'username='+paramUsername+"&password="+paramPassword,
+		dataType    : 'json',
+        async       : false,
+            success : function(res){
 			validacion = res.validacion;
 			if(validacion){
 				$("#frmLogin").submit();

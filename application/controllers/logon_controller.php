@@ -14,16 +14,16 @@
 		public function validar(){
 			//$username = $_POST['txtUserName'];
 			//$password = $_POST['txtPassword'];
-			
 			$data = $this->input->post();
 			
-			$validacion = $this->login_model->validarUsuario($data);
-			if(!validacion){
-				redirect(base_url().'index.php/login/error/');
-			}elseif($validacion['type']=="teacher"){
-				redirect(base_url()."index.php/assesment_controller");
-			}elseif($validacion['type']=="student"){
-				redirect(base_url()."index.php/student_dashboard_controller");
+			$validacion = $this->login_model->validarUsuario($data['txtUserName'],$data['txtPassword']);
+
+            if($validacion['validacion']){
+                if($validacion['type']=="teacher"){
+                    redirect(base_url()."index.php/assesment_controller");
+                }elseif($validacion['type']=="student"){
+                    redirect(base_url()."index.php/student_dashboard_controller");
+                }
 			}else{
 				redirect(base_url().'index.php/login/error/');
 			}
@@ -31,17 +31,18 @@
 		}
 		
 		public function coreValidacion(){
-			$data['txtUserName']= $this->input->post('username');
-			$data['txtPassword']= $this->input->post('password');
+            $data['username']= $this->input->post("username");
+            $data['password']= $this->input->post("password");
 			
-			$validacion = $this->login_model->validarUsuario($data);
-			print_r($validacion);
+			$validacion = $this->login_model->validarUsuario($data['username'],$data['password']);
+
 			header('Content-Type: application/json');
-			if(!$validacion){
-				echo json_encode(array('validacion' => false));
+			if($validacion['validacion']){
+				echo json_encode(array('validacion' => 'true'));
 			}else{
-				echo json_encode(array('validacion' => true));
+				echo json_encode(array('validacion' => 'false'));
 			}
+
 		}
     }
 ?>
