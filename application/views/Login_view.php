@@ -33,6 +33,23 @@
 		<!-- END THEME STYLES -->
 		<link rel="shortcut icon" href="favicon.ico"/>
 	</head>
+	<script>
+		function cancelSubmit(){
+			
+			if (event.keyCode == 13){ 
+				event.cancelBubble = true;
+				event.returnValue = false;       
+				if(document.getElementById("txtUserName").value != ""){
+					if(document.getElementById("txtPassword").value != ""){
+						$("#lnkLogin").click();
+					}else{
+						document.getElementById("txtPassword").focus();
+					}
+				}
+	         }
+		}		
+		
+	</script>
 <body class="login" >
 	<!-- BEGIN LOGIN -->
 	<div class="logo">
@@ -52,14 +69,14 @@
 				<label class="control-label visible-ie8 visible-ie9">Username</label>
 				<div class="input-icon">
 					<i class="fa fa-user"></i>
-					<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="txtUserName" id="txtUserName"/>
+					<input class="form-control placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="txtUserName" id="txtUserName" onkeydown="cancelSubmit()"//>
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="control-label visible-ie8 visible-ie9">Password</label>
 				<div class="input-icon">
 					<i class="fa fa-lock"></i>
-					<input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="txtPassword" id="txtPassword"/>
+					<input class="form-control placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="txtPassword" id="txtPassword" onkeydown="cancelSubmit()"/>
 				</div>
 			</div>
 			<div class="form-actions row">

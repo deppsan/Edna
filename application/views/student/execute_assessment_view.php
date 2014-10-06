@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <div class="portlet-body" id="testBody" style="height: 255px">
-                        <div class="note note-success" style="height: 214px">
+                        <div class="note note-success" style="height: 229px">
                             <h4 class="block">Responds Quickly:</h4>
                             <p>
                                 <div class="row">
@@ -44,22 +44,14 @@
                                     </div>
                                     <div class="col-md-4"></div>
                                 </div>
-                                <div class="row" id="divAreaTest" style="display: none;">
-                                    <div class="row">
-                                        <div class="col-md-2"></div>
-                                        <div class="col-md-8" style="zoom:2;">
-                                            <label class="btn btn-default" id="lblValue1">1</label>
-                                            <label class="btn btn-default" i>+</label>
-                                            <label class="btn btn-default" id="lblValue2">1</label>
-                                            <label class="btn btn-default" i>=</label>
-                                            <label class="btn btn-default" id="lblResult">2</label>
-                                        </div>
-                                        <div class="col-md-2"></div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-5"></div>
-                                        <div class="col-md-5"></div>
-                                        <div class="col-md-2"></div>
+                                <div class="row active" id="divExArea">
+                                	
+                                </div>
+                                <div class="row hiddenDiv active" style="display: none;">
+                                    <div class="col-md-5"></div>
+                                    <div class="col-md-5"></div>
+                                    <div class="col-md-2">
+                                    	<button type="button" class="btn blue" style="width: 100px;height: 53px;font-size: 2em;" id="btnNext">Next</button>
                                     </div>
                                 </div>
 

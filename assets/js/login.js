@@ -4,25 +4,10 @@ var $txtPassword ;
 $(document).ready(function(){	
 	$txtUserName = $("#txtUserName");
  	$txtPassword = $("#txtPassword");
-	$( "#frmLogin" ).submit(function( event ) {
-		if(validacion){			
-		}else{
-			event.preventDefault();
-
-		}		
-	});
 	$("#lnkLogin").click(validar);	
 });
 
-$(document).keypress(function(tecla){
-    if (tecla.which == 13) { 
-        validar();
-    }
-});
-
-function validar(){
-
-	
+function validar(){	
 	if($txtUserName.val() == "" || $txtUserName.val() == undefined || $txtUserName.val() == null){
 		if(!$txtUserName.parent().parent().hasClass('has-error')){
 			$txtUserName.parent().parent().addClass('has-error');
@@ -51,7 +36,7 @@ function coreValidacion(paramUsername, paramPassword){
         data	    : 'username='+paramUsername+"&password="+paramPassword,
 		dataType    : 'json',
         async       : false,
-            success : function(res){
+        success 	: function(res){
 			validacion = res.validacion;
 			if(validacion){
 				$("#frmLogin").submit();

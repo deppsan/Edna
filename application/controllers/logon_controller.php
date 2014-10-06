@@ -12,8 +12,6 @@
 		}
 		
 		public function validar(){
-			//$username = $_POST['txtUserName'];
-			//$password = $_POST['txtPassword'];
 			$data = $this->input->post();
 			
 			$validacion = $this->login_model->validarUsuario($data['txtUserName'],$data['txtPassword']);
@@ -38,9 +36,9 @@
 
 			header('Content-Type: application/json');
 			if($validacion['validacion']){
-				echo json_encode(array('validacion' => 'true'));
+				echo json_encode(array('validacion' => true));
 			}else{
-				echo json_encode(array('validacion' => 'false'));
+				echo json_encode(array('validacion' => false));
 			}
 
 		}
