@@ -68,11 +68,10 @@ function nextEx(){
 	
 		$activeEx 	= $(".active.ex");
 		$nextEx		= $activeEx.siblings().eq($activeEx.index());
+		$input		= $activeEx.find("input");
 		
 		if($activeEx .find("input").val() != ""){
-			$nextEx.css("position","relative");
-			$nextEx.css("left","355px");
-			$nextEx.css("opacity","0");
+			$nextEx.css("position","relative").css("left","355px").css("opacity","0");
 			
 			$activeEx.css("position","relative");
 			$activeEx.animate(
@@ -82,9 +81,9 @@ function nextEx(){
 				complete:function(){
 					if($nextEx[0] != null){
 						$activeEx.css("display","none");
-						$nextEx.css("display","");
+						
 						$(".active").removeClass("active");				
-						$nextEx.addClass("active");
+						$nextEx.addClass("active").css("display","");
 						$nextEx.animate(
 							{
 								left:"",
@@ -100,4 +99,12 @@ function nextEx(){
 		}else{
 			$activeEx.find("input").focus();
 		}
+}
+
+function reviewEx(){
+	
+}
+
+function timeCounter(){
+	
 }
