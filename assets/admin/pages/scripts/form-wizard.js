@@ -13,19 +13,16 @@ var FormWizard = function () {
                 return "<img class='flag' src='../../assets/global/img/flags/" + state.id.toLowerCase() + ".png'/>&nbsp;&nbsp;" + state.text;
             }
 
-            $("#country_list").select2({
-                placeholder: "Select",
-                allowClear: true,
-                formatResult: format,
-                formatSelection: format,
-                escapeMarkup: function (m) {
-                    return m;
-                }
-            });
+
 
             var form = $('#submit_form');
             var error = $('.alert-danger', form);
             var success = $('.alert-success', form);
+
+            // add the rule here
+            $.validator.addMethod("valueNotEquals", function(value, element, arg){
+                return arg != value;
+            }, "Value must not equal arg.");
 
             form.validate({
                 doNotHideMessage: true, //this option enables to show the error/success messages on tab switch.
@@ -34,10 +31,11 @@ var FormWizard = function () {
                 focusInvalid: false, // do not focus the last invalid input
                 rules: {
                     //account
-                    username: {
-                        minlength: 5,
-                        required: true
-                    },
+                    cmbSubject: {
+                        required: true,
+                        valueNotEquals: "0"
+
+                    }/*,
                     password: {
                         minlength: 5,
                         required: true
@@ -91,7 +89,7 @@ var FormWizard = function () {
                     'payment[]': {
                         required: true,
                         minlength: 1
-                    }
+                    }*/
                 },
 
                 messages: { // custom messages for radio buttons and checkboxes

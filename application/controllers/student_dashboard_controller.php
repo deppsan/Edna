@@ -11,7 +11,7 @@ class student_dashboard_controller extends CI_Controller {
 			$this->load->view('assesment_view_header');
 			$this->load->view('assesment_view_sidebar');
 			$this->load->view('student/dashboard_view_student');
-			$this->load->view('assesment_view_footer');			
+            $this->load->view('student/student_assessment_footer');
 		}		
 		
 		public function test(){
@@ -34,7 +34,7 @@ class student_dashboard_controller extends CI_Controller {
 			$this->load->view('assesment_view_header');
 			$this->load->view('assesment_view_sidebar');
 			$this->load->view('student/execute_assessment_view',$data);
-			$this->load->view('assesment_view_footer');
+			$this->load->view('student/student_assessment_footer');
 			
 		}
     }

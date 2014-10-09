@@ -56,6 +56,10 @@
 	<script src="<?php echo base_url();?>assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
 	<script src="<?php echo base_url();?>assets/admin/pages/scripts/index.js" type="text/javascript"></script>
 	<script src="<?php echo base_url();?>assets/admin/pages/scripts/tasks.js" type="text/javascript"></script>
+        <script src="<?php echo base_url();?>assets/global/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+        <script src="<?php echo base_url();?>assets/global/plugins/jquery-validation/js/additional-methods.min.js"></script>
+        <script src="<?php echo base_url();?>assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+        <script src="<?php echo base_url();?>assets/admin/pages/scripts/form-wizard.js"></script>
 	<!-- END PAGE LEVEL SCRIPTS -->
 	<script>
 	jQuery(document).ready(function() {    
@@ -71,8 +75,11 @@
 	   Index.initMiniCharts();
 	   Index.initIntro();
 	   Tasks.initDashboardWidget();
+       FormWizard.init();
 	});
 	</script>
 	<!-- END JAVASCRIPTS -->
-	<script type="text/javascript" src="<?php echo base_url();?>assets/js/assessment.js"></script>
-</html>
+        <script type="text/javascript" src="<?php echo base_url();?>assets/js/assessment_creator.js"></script>
+
+        </html>
+

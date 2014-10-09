@@ -1,5 +1,5 @@
 <!-- BEGIN SIDEBAR -->
-<div class="page-sidebar-wrapper">
+<div class="page-sidebar-wrapper" xmlns="http://www.w3.org/1999/html">
     <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
     <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
     <div class="page-sidebar navbar-collapse collapse">
@@ -30,138 +30,238 @@
                 </form>
                 <!-- END RESPONSIVE QUICK SEARCH FORM -->
             </li>
+
+
+
+
+
+
+
+
+
+<!---------------------------------BEGIN MODIFIED SIDEBAR MENU----------------------------------->
+
+
             <li class="start active ">
-                <a href="index.html">
+                <a href="#">
                 <i class="icon-home"></i>
                 <span class="title">Dashboard</span>
                 <span class="selected"></span>
                 </a>
             </li>
+
+            <li>
+                <a href="#">
+                    <i class="icon-docs"></i>
+                    <span class="title">Library</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="icon-equalizer"></i>
+                    <span class="title">Statistics</span>
+                </a>
+            </li>
+
             <li>
                 <a href="javascript:;">
-                <i class="icon-basket"></i>
-                <span class="title">eCommerce</span>
-                <span class="arrow "></span>
+                    <i class="icon-book-open"></i>
+                    <span class="title">History</span>
+                    <span class="arrow "></span>
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a href="ecommerce_index.html">
+                        <a href="#">
+                            Last Week</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Last 2 Weeks</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Last Month</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Last Term</a>
+                    </li>
+                    <li class="last ">
+                        <a href="#">
+                            <span class="badge badge-roundless badge-danger">New</span>All</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript:;">
+                    <i class="icon-settings"></i>
+                    <span class="title">Setup</span>
+                    <span class="arrow "></span>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="#">
+                            <i class="icon-notebook"></i>
+                            My Classes</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="icon-users"></i>
+                            Parents</a>
+                    </li>
+
+                </ul>
+            </li>
+
+<!---------------------------------END MODIFIED SIDEBAR MENU----------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+            <!--    <li class="start active ">
+                        <a href="index.html">
                         <i class="icon-home"></i>
-                        Dashboard</a>
+                        <span class="title">Dashboard</span>
+                        <span class="selected"></span></a>
                     </li>
+
                     <li>
-                        <a href="ecommerce_orders.html">
+                        <a href="javascript:;">
                         <i class="icon-basket"></i>
-                        Orders</a>
+                        <span class="title">eCommerce</span>
+                        <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="ecommerce_index.html">
+                                <i class="icon-home"></i>
+                                Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_orders.html">
+                                <i class="icon-basket"></i>
+                                Orders</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_orders_view.html">
+                                <i class="icon-tag"></i>
+                                Order View</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_products.html">
+                                <i class="icon-handbag"></i>
+                                Products</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_products_edit.html">
+                                <i class="icon-pencil"></i>
+                                Product Edit</a>
+                            </li>
+                        </ul>
                     </li>
+
                     <li>
-                        <a href="ecommerce_orders_view.html">
-                        <i class="icon-tag"></i>
-                        Order View</a>
+                        <a href="javascript:;">
+                        <i class="icon-rocket"></i>
+                        <span class="title">Page Layouts</span>
+                        <span class="arrow "></span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="layout_horizontal_sidebar_menu.html">
+                                Horizontal & Sidebar Menu</a>
+                            </li>
+                            <li>
+                                <a href="index_horizontal_menu.html">
+                                Dashboard & Mega Menu</a>
+                            </li>
+                            <li>
+                                <a href="layout_horizontal_menu1.html">
+                                Horizontal Mega Menu 1</a>
+                            </li>
+                            <li>
+                                <a href="layout_horizontal_menu2.html">
+                                Horizontal Mega Menu 2</a>
+                            </li>
+                            <li>
+                                <a href="layout_fontawesome_icons.html">
+                                <span class="badge badge-roundless badge-danger">new</span>Layout with Fontawesome Icons</a>
+                            </li>
+                            <li>
+                                <a href="layout_glyphicons.html">
+                                Layout with Glyphicon</a>
+                            </li>
+                            <li>
+                                <a href="layout_full_height_portlet.html">
+                                <span class="badge badge-roundless badge-success">new</span>Full Height Portlet</a>
+                            </li>
+                            <li>
+                                <a href="layout_full_height_content.html">
+                                <span class="badge badge-roundless badge-warning">new</span>Full Height Content</a>
+                            </li>
+                            <li>
+                                <a href="layout_search_on_header1.html">
+                                Search Box On Header 1</a>
+                            </li>
+                            <li>
+                                <a href="layout_search_on_header2.html">
+                                Search Box On Header 2</a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar_search_option1.html">
+                                Sidebar Search Option 1</a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar_search_option2.html">
+                                Sidebar Search Option 2</a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar_reversed.html">
+                                <span class="badge badge-roundless badge-warning">new</span>Right Sidebar Page</a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar_fixed.html">
+                                Sidebar Fixed Page</a>
+                            </li>
+                            <li>
+                                <a href="layout_sidebar_closed.html">
+                                Sidebar Closed Page</a>
+                            </li>
+                            <li>
+                                <a href="layout_ajax.html">
+                                Content Loading via Ajax</a>
+                            </li>
+                            <li>
+                                <a href="layout_disabled_menu.html">
+                                Disabled Menu Links</a>
+                            </li>
+                            <li>
+                                <a href="layout_blank_page.html">
+                                Blank Page</a>
+                            </li>
+                            <li>
+                                <a href="layout_boxed_page.html">
+                                Boxed Page</a>
+                            </li>
+                            <li>
+                                <a href="layout_language_bar.html">
+                                Language Switch Bar</a>
+                            </li>
+                        </ul>
                     </li>
-                    <li>
-                        <a href="ecommerce_products.html">
-                        <i class="icon-handbag"></i>
-                        Products</a>
-                    </li>
-                    <li>
-                        <a href="ecommerce_products_edit.html">
-                        <i class="icon-pencil"></i>
-                        Product Edit</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;">
-                <i class="icon-rocket"></i>
-                <span class="title">Page Layouts</span>
-                <span class="arrow "></span>
-                </a>
-                <ul class="sub-menu">
-                    <li>
-                        <a href="layout_horizontal_sidebar_menu.html">
-                        Horizontal & Sidebar Menu</a>
-                    </li>
-                    <li>
-                        <a href="index_horizontal_menu.html">
-                        Dashboard & Mega Menu</a>
-                    </li>
-                    <li>
-                        <a href="layout_horizontal_menu1.html">
-                        Horizontal Mega Menu 1</a>
-                    </li>
-                    <li>
-                        <a href="layout_horizontal_menu2.html">
-                        Horizontal Mega Menu 2</a>
-                    </li>
-                    <li>
-                        <a href="layout_fontawesome_icons.html">
-                        <span class="badge badge-roundless badge-danger">new</span>Layout with Fontawesome Icons</a>
-                    </li>
-                    <li>
-                        <a href="layout_glyphicons.html">
-                        Layout with Glyphicon</a>
-                    </li>
-                    <li>
-                        <a href="layout_full_height_portlet.html">
-                        <span class="badge badge-roundless badge-success">new</span>Full Height Portlet</a>
-                    </li>
-                    <li>
-                        <a href="layout_full_height_content.html">
-                        <span class="badge badge-roundless badge-warning">new</span>Full Height Content</a>
-                    </li>
-                    <li>
-                        <a href="layout_search_on_header1.html">
-                        Search Box On Header 1</a>
-                    </li>
-                    <li>
-                        <a href="layout_search_on_header2.html">
-                        Search Box On Header 2</a>
-                    </li>
-                    <li>
-                        <a href="layout_sidebar_search_option1.html">
-                        Sidebar Search Option 1</a>
-                    </li>
-                    <li>
-                        <a href="layout_sidebar_search_option2.html">
-                        Sidebar Search Option 2</a>
-                    </li>
-                    <li>
-                        <a href="layout_sidebar_reversed.html">
-                        <span class="badge badge-roundless badge-warning">new</span>Right Sidebar Page</a>
-                    </li>
-                    <li>
-                        <a href="layout_sidebar_fixed.html">
-                        Sidebar Fixed Page</a>
-                    </li>
-                    <li>
-                        <a href="layout_sidebar_closed.html">
-                        Sidebar Closed Page</a>
-                    </li>
-                    <li>
-                        <a href="layout_ajax.html">
-                        Content Loading via Ajax</a>
-                    </li>
-                    <li>
-                        <a href="layout_disabled_menu.html">
-                        Disabled Menu Links</a>
-                    </li>
-                    <li>
-                        <a href="layout_blank_page.html">
-                        Blank Page</a>
-                    </li>
-                    <li>
-                        <a href="layout_boxed_page.html">
-                        Boxed Page</a>
-                    </li>
-                    <li>
-                        <a href="layout_language_bar.html">
-                        Language Switch Bar</a>
-                    </li>
-                </ul>
-            </li>
+            -->
+
             <!-- BEGIN FRONTEND THEME LINKS -->
-            <li>
+    <!--        <li>
                 <a href="javascript:;">
                 <i class="icon-star"></i>
                 <span class="title">
@@ -190,7 +290,9 @@
                     </li>
                 </ul>
             </li>
+    -->
             <!-- END FRONTEND THEME LINKS -->
+    <!--
             <li>
                 <a href="javascript:;">
                 <i class="icon-diamond"></i>
@@ -673,6 +775,7 @@
                     </li>
                 </ul>
             </li>
+
             <li class="last ">
                 <a href="charts.html">
                 <i class="icon-bar-chart"></i>
@@ -680,11 +783,417 @@
                 </a>
             </li>
         </ul>
+    -->
         <!-- END SIDEBAR MENU -->
     </div>
 </div>
+
 <!-- END SIDEBAR -->
+
+
+
+
+
+
+
+
+
+
+<!----------------------BEGIN MODIFIED QUICK-SIDEBAR   @LUIS TREVIÑO ----------------------------------->
+
+
+
+<a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
+<div class="page-quick-sidebar-wrapper">
+    <div class="page-quick-sidebar">
+        <div class="nav-justified">
+            <ul class="nav nav-tabs nav-justified">
+                <li class="active">
+                    <a href="#quick_sidebar_tab_1" data-toggle="tab" id="quick-sidebar-alerts">
+                    Alerts <span class="badge badge-danger">2</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#quick_sidebar_tab_2" data-toggle="tab">
+                    Inbox <span class="badge badge-success">4</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-toggle="tab">
+                    Notifications <span class="badge badge-success">3</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#quick_sidebar_tab_4" data-toggle="tab">
+                    <i class="icon-settings"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+
+
+            <div class="tab-content">
+                <div class="tab-pane page-quick-sidebar-alerts" id="quick_sidebar_tab_1">
+                    <div class="page-quick-sidebar-alerts-list">
+                        <h3 class="list-heading">Today</h3>
+                        <ul class="feeds list-items">
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-danger">
+                                                <i class="fa fa-times"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc">
+                                                Student Failed Assignment
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    <div>
+                                        <a href="" id="take-action">
+                                        <span class="label label-sm label-warning ">
+                                                Take action <i class="fa fa-share"></i>  </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-success">
+                                                <i class="fa fa-info"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc">
+                                                End of Term in 1 Week
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    <div class="date">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                    <div class="col1">
+                                        <div class="cont">
+                                            <div class="cont-col1">
+                                                <div class="label label-sm label-warning">
+                                                    <i class="fa fa-warning"></i>
+                                                </div>
+                                            </div>
+                                            <div class="cont-col2">
+                                                <div class="desc">
+                                                    Due date for assignment "Divisions" close
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col2">
+                                        <div class="date">
+                                            Tomorrow
+                                        </div>
+                                    </div>
+                            </li>
+                        </ul>
+                        <h3 class="list-heading">Yesterday</h3>
+                        <ul class="feeds list-items">
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div class="label label-sm label-success">
+                                                <i class="fa fa-info"></i>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc">
+                                                You have 4 pending tasks.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    <div class="date">
+                                        Just now
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                    <div class="col1">
+                                        <div class="cont">
+                                            <div class="cont-col1">
+                                                <div class="label label-sm label-success">
+                                                    <i class="fa fa-info"></i>
+                                                </div>
+                                            </div>
+                                            <div class="cont-col2">
+                                                <div class="desc">
+                                                    Finance Report for year 2013 has been released.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col2">
+                                        <div class="date">
+                                            20 mins
+                                        </div>
+                                    </div>
+                            </li>
+                            <li>
+                                    <div class="col1">
+                                        <div class="cont">
+                                            <div class="cont-col1">
+                                                <div class="label label-sm label-success">
+                                                    <i class="fa fa-info"></i>
+                                                </div>
+                                            </div>
+                                            <div class="cont-col2">
+                                                <div class="desc">
+                                                    Finance Report for year 2013 has been released.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col2">
+                                        <div class="date">
+                                            20 mins
+                                        </div>
+                                    </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+                <div class="tab-pane page-quick-sidebar-alerts" id="quick_sidebar_tab_2">
+                    <div class="page-quick-sidebar-alerts-list">
+                        <h3 class="list-heading">Today</h3>
+                        <ul class="feeds list-items">
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div>
+                                                <img alt="" class="img-circle" src="<?php echo base_url();?>assets/admin/layout/img/avatar3_small.jpg"/>
+	                                            <span class="username">
+	                                            Bob </span>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc">
+                                                Hey There
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    <div class="date">
+                                        Just Now
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div>
+                                                <img alt="" class="img-circle" src="<?php echo base_url();?>assets/admin/layout/img/avatar3_small.jpg"/>
+	                                            <span class="username">
+	                                            James </span>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc">
+                                                What's up?
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    <div class="date">
+                                        1 Hour Ago
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div>
+                                                <img alt="" class="img-circle" src="<?php echo base_url();?>assets/admin/layout/img/avatar3_small.jpg"/>
+	                                            <span class="username">
+	                                            Claire </span>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc">
+                                                About the Meeting
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    <div class="date">
+                                        3 Hours Ago
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <h3 class="list-heading">Yesterday</h3>
+                        <ul class="feeds list-items">
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div>
+                                                <img alt="" class="img-circle" src="<?php echo base_url();?>assets/admin/layout/img/avatar3_small.jpg"/>
+	                                            <span class="username">
+	                                            Luis </span>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc">
+                                                I don't get it
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    <div class="date">
+                                        18:30
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div>
+                                                <img alt="" class="img-circle" src="<?php echo base_url();?>assets/admin/layout/img/avatar3_small.jpg"/>
+	                                            <span class="username">
+	                                            Matt </span>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc">
+                                                Great Job!!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    <div class="date">
+                                        14:24
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="col1">
+                                    <div class="cont">
+                                        <div class="cont-col1">
+                                            <div>
+                                                <img alt="" class="img-circle" src="<?php echo base_url();?>assets/admin/layout/img/avatar3_small.jpg"/>
+	                                            <span class="username">
+	                                            Lindsey </span>
+                                            </div>
+                                        </div>
+                                        <div class="cont-col2">
+                                            <div class="desc">
+                                                Party!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col2">
+                                    <div class="date">
+                                        12:30
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+
+
+
+<div class="tab-pane page-quick-sidebar-settings" id="quick_sidebar_tab_4">
+    <div class="page-quick-sidebar-settings-list">
+        <h3 class="list-heading">General Settings</h3>
+        <ul class="list-items borderless">
+            <li>
+                Enable Notifications <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="success" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+            </li>
+            <li>
+                Allow Tracking <input type="checkbox" class="make-switch" data-size="small" data-on-color="info" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+            </li>
+            <li>
+                Log Errors <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="danger" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+            </li>
+            <li>
+                Auto Sumbit Issues <input type="checkbox" class="make-switch" data-size="small" data-on-color="warning" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+            </li>
+            <li>
+                Enable SMS Alerts <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="success" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+            </li>
+        </ul>
+        <h3 class="list-heading">System Settings</h3>
+        <ul class="list-items borderless">
+            <li>
+                Security Level
+                <select class="form-control input-inline input-sm input-small">
+                    <option value="1">Normal</option>
+                    <option value="2" selected>Medium</option>
+                    <option value="e">High</option>
+                </select>
+            </li>
+            <li>
+                Failed Email Attempts <input class="form-control input-inline input-sm input-small" value="5"/>
+            </li>
+            <li>
+                Secondary SMTP Port <input class="form-control input-inline input-sm input-small" value="3560"/>
+            </li>
+            <li>
+                Notify On System Error <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="danger" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+            </li>
+            <li>
+                Notify On SMTP Error <input type="checkbox" class="make-switch" checked data-size="small" data-on-color="warning" data-on-text="ON" data-off-color="default" data-off-text="OFF">
+            </li>
+        </ul>
+        <div class="inner-content">
+            <button class="btn btn-success"><i class="icon-settings"></i> Save Changes</button>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<!--------------------------END MODIFIED QUICK-SIDEBAR  @LUIS TREVIÑO ----------------------------------->
+
+
+
+
+
+
 <!-- BEGIN QUICK SIDEBAR -->
+<!--
 <a href="javascript:;" class="page-quick-sidebar-toggler"><i class="icon-close"></i></a>
 <div class="page-quick-sidebar-wrapper">
     <div class="page-quick-sidebar">
@@ -692,12 +1201,12 @@
             <ul class="nav nav-tabs nav-justified">
                 <li class="active">
                     <a href="#quick_sidebar_tab_1" data-toggle="tab">
-                    Users <span class="badge badge-danger">2</span>
+                    Alerts <span class="badge badge-danger">2</span>
                     </a>
                 </li>
                 <li>
                     <a href="#quick_sidebar_tab_2" data-toggle="tab">
-                    Alerts <span class="badge badge-success">7</span>
+                    Messages <span class="badge badge-success">7</span>
                     </a>
                 </li>
                 <li class="dropdown">
@@ -1334,4 +1843,5 @@
         </div>
     </div>
 </div>
+-->
 <!-- END QUICK SIDEBAR -->

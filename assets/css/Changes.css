@@ -1,0 +1,82 @@
+/*Changes the color of the link in the first tab of the quick-side-bar to Red*/
+#quick-sidebar-alerts{
+    color:#d02121;
+}
+/*Overrides the width and position of the quick-side-bar to make it 400px wide*/
+.page-quick-sidebar-wrapper{
+    right:-400px;
+    width:400px;
+}
+
+/*Overrides the width and position of the content on TAB 1 to match the new size of 400px*/
+.page-quick-sidebar-wrapper .page-quick-sidebar .page-quick-sidebar-list {
+    width: 400px !important;
+}
+.page-quick-sidebar-wrapper .page-quick-sidebar .page-quick-sidebar-item {
+    width: 400px !important;
+    margin-left: 400px;
+}
+
+/*Overrides the color of the content of the 4th tab on the quick-side-bar*/
+/*Adds Box-Shadow to distinguish the setting from the navigation tabs*/
+.page-quick-sidebar-wrapper .page-quick-sidebar .nav-justified ul li:nth-child(4) a {
+    color: white;
+    box-shadow: 0px 0px 30px #353535 inset;
+}
+
+.page-quick-sidebar-wrapper .page-quick-sidebar .nav-justified ul li:not(last-child) a {
+    box-shadow:inset 20px -13px 15px -15px #353535;
+}
+
+/*Changes links for TakeAction o have no decoration.. instead of a tag a path or class must be modified.*/
+#take-action{
+    text-decoration: none;
+
+}
+/*Overrides properties of the left column of the second tab of the quick-side-bar*/
+#quick_sidebar_tab_2 .feeds li .col1 > .cont > .cont-col1 {
+    width:100px;
+    border-right: 1px solid #424242;
+}
+
+/*Overrides properties of the content in middle column of the second tab of the quick-side-bar*/
+#quick_sidebar_tab_2 .feeds li .col1 > .cont > .cont-col2 {
+    margin-left: 80px;
+    font-style: italic;
+}
+
+/*Overrides properties of the right column of the second tab of the quick-side-bar*/
+.feeds li .col2 {
+    width: 90px;
+    margin-left: -90px;
+}
+/*Overrides background color on step number in Wizard FOrm*/
+.form-wizard .steps > li.active > a.step .number {
+    background-color: #4b8df8;
+    color: #fff;
+}
+
+/*Overrides background color on progress bar in Wizard Form*/
+.progress > .progress-bar-success {
+    background-color: #4b8df8;
+}
+
+label{
+  color: #4b8df8;
+}
+
+#RadioButtons{
+    margin-left: 50px;
+    margin-top: 25px;
+}
+
+#Example{
+margin-right: 500px;
+margin-left: 150px;
+}
+#Text{
+    height: 40px;
+}
+#Skill{
+    margin-right: 500px;
+}

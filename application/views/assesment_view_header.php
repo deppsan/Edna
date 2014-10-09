@@ -32,7 +32,13 @@
 		<link href="<?php echo base_url();?>assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
 		<!-- END THEME STYLES -->
 		<link rel="shortcut icon" href="favicon.ico"/>
-	</head>
+
+    <!-- BEGIN CSS CHANGES  @LUIS TREVIÑO -->
+        <link href="<?php echo base_url();?>assets/css/Changes.css" rel="stylesheet" type="text/css"/>
+    <!-- END CSS CHANGES  @LUIS TREVIÑO -->
+
+
+    </head>
 
 	<body class="page-header-fixed page-quick-sidebar-over-content">
 	<!-- BEGIN HEADER -->
@@ -56,7 +62,11 @@
 	        <!-- BEGIN TOP NAVIGATION MENU -->
 	        <div class="top-menu">
 	            <ul class="nav navbar-nav pull-right">
-	                <!-- BEGIN NOTIFICATION DROPDOWN -->
+
+
+                <!-- BEGIN NOTIFICATION DROPDOWN -->
+
+<!--
 	                <li class="dropdown dropdown-extended dropdown-notification" id="header_notification_bar">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 	                    <i class="icon-bell"></i>
@@ -161,8 +171,15 @@
 	                        </li>
 	                    </ul>
 	                </li>
+
+-->
 	                <!-- END NOTIFICATION DROPDOWN -->
+
+
+
 	                <!-- BEGIN INBOX DROPDOWN -->
+
+<!--
 	                <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 	                    <i class="icon-envelope-open"></i>
@@ -261,8 +278,16 @@
 	                        </li>
 	                    </ul>
 	                </li>
+
+-->
+
 	                <!-- END INBOX DROPDOWN -->
+
+
 	                <!-- BEGIN TODO DROPDOWN -->
+
+<!--
+
 	                <li class="dropdown dropdown-extended dropdown-tasks" id="header_task_bar">
 	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
 	                    <i class="icon-calendar"></i>
@@ -398,10 +423,17 @@
 	                        </li>
 	                    </ul>
 	                </li>
+
+-->
+
 	                <!-- END TODO DROPDOWN -->
+
+
+
+
 	                <!-- BEGIN USER LOGIN DROPDOWN -->
 	                <li class="dropdown dropdown-user">
-	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+	                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"  data-close-others="true">
 	                    <img alt="" class="img-circle" src="<?php echo base_url();?>assets/admin/layout/img/avatar3_small.jpg"/>
 	                    <span class="username">
 	                    Bob </span>
@@ -413,23 +445,16 @@
 	                            <i class="icon-user"></i> My Profile </a>
 	                        </li>
 	                        <li>
-	                            <a href="page_calendar.html">
-	                            <i class="icon-calendar"></i> My Calendar </a>
-	                        </li>
-	                        <li>
-	                            <a href="inbox.html">
-	                            <i class="icon-envelope-open"></i> My Inbox <span class="badge badge-danger">
-	                            3 </span>
-	                            </a>
-	                        </li>
-	                        <li>
 	                            <a href="#">
-	                            <i class="icon-rocket"></i> My Tasks <span class="badge badge-success">
-	                            7 </span>
+	                            <i class="icon-wrench"></i> Account Settings
 	                            </a>
 	                        </li>
 	                        <li class="divider">
 	                        </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon-settings"></i> App Settings </a>
+                            </li>
 	                        <li>
 	                            <a href="extra_lock.html">
 	                            <i class="icon-lock"></i> Lock Screen </a>
@@ -444,7 +469,8 @@
 	                <!-- BEGIN QUICK SIDEBAR TOGGLER -->
 	                <li class="dropdown dropdown-quick-sidebar-toggler">
 	                    <a href="javascript:;" class="dropdown-toggle">
-	                    <i class="icon-logout"></i>
+	                    <i class="icon-bell"></i>
+                        <span class="badge badge-default">9</span>
 	                    </a>
 	                </li>
 	                <!-- END QUICK SIDEBAR TOGGLER -->

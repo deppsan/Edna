@@ -15,8 +15,8 @@
 |
 */
 //$config['base_url']	= 'http://127.0.0.1/edna/';			/*ruta para servidor desde computadora de Chi*/
-//$config['base_url']	= 'http://127.0.0.1:8081/edna/';	/*ruta para servidor desde computadora de Famsa*/
-$config['base_url']	= 'http://128.10.17.213:8081/edna/';	/*ruta para servidor desde computadora de Famsa*/
+$config['base_url']	= 'http://localhost:8888/EDNA_Master/';	/*ruta para servidor desde computadora de Famsa*/
+//$config['base_url']	= 'http://128.10.17.213:8081/edna/';	/*ruta para servidor desde computadora de Famsa*/
 
 /*
 |--------------------------------------------------------------------------

@@ -18,7 +18,7 @@
 
             if($validacion['validacion']){
                 if($validacion['type']=="teacher"){
-                    redirect(base_url()."index.php/assesment_controller");
+                    redirect(base_url()."index.php/assesment_creator_controller");
                 }elseif($validacion['type']=="student"){
                     redirect(base_url()."index.php/student_dashboard_controller");
                 }
