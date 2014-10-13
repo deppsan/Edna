@@ -9,10 +9,10 @@ function cuentaRegresiva(){
     var $contador 	= $("#contador");
     var $hiddenDiv 	= $(".active");
     
-    $($contador).css("margin-left","25%");
-    $($contador).css("margin-right","25%");
-    $contador.css("zoom","4");
-    $contador.text("3");
+    $($contador).css("margin-left","25%")
+    			.css("margin-right","25%");
+    $contador.css("zoom","4")
+    		 .text("3");
 
     var p = function(){
         for(var i = 0 ; i <= 3 ; i++){
@@ -23,17 +23,18 @@ function cuentaRegresiva(){
             {duration:"slow",
                 complete:function() {
                     if ($contador.text()-1 == 0) {
-                        $contador.css("margin-left","20%");
-                        $contador.text("Go!");
-                        $contador.css("zoom", "4");
-                        $contador.css("opacity", "1");
+                        $contador.css("margin-left","20%")
+                        		.text("Go!")
+                        		.css("zoom", "4")
+                        		.$contador
+                        		.css("opacity", "1");
                     }else if($($contador).text() > 0) {
-                        $($contador).text($contador.text() - 1);
-                        $($contador).css("zoom", "4");
-                        $($contador).css("opacity", "1");
+                        $($contador).text($contador.text() - 1)
+                        			.css("zoom", "4")
+                        			.css("opacity", "1");
                     }else{
                         $hiddenDiv.css("display","");
-                        $(".result").focus()
+                        $(".result").focus();
                     }
                 }
             });
@@ -71,7 +72,10 @@ function nextEx(){
 		$input		= $activeEx.find("input");
 		
 		if($activeEx .find("input").val() != ""){
-			$nextEx.css("position","relative").css("left","355px").css("opacity","0");
+			
+			$nextEx.css("position","relative")
+				   .css("left","355px")
+				   .css("opacity","0");
 			
 			$activeEx.css("position","relative");
 			$activeEx.animate(
@@ -82,14 +86,14 @@ function nextEx(){
 					if($nextEx[0] != null){
 						$activeEx.css("display","none");
 						
-						$(".active").removeClass("active");				
+						$(".active").removeClass("active");
 						$nextEx.addClass("active").css("display","");
 						$nextEx.animate(
 							{
 								left:"",
 								opacity:"1"
 							}
-						)
+						);
 						$(".active").find("input").focus();
 					}else{
 						
@@ -101,7 +105,7 @@ function nextEx(){
 		}
 }
 
-function reviewEx(){
+function reviewEx(paramInput){
 	
 }
 
