@@ -32,6 +32,12 @@
                         <div class="caption">
                             <i class="fa fa-cubes">Ready! Go!</i>
                         </div>
+						<div class="tools">
+							<a href="javascript:;" class="reload" style="display:none;">
+							</a>
+							<a href="" class="fullscreen">
+							</a>
+						</div>
                     </div>
                     <div class="portlet-body" id="testBody" style="height: 255px">
                         <div class="note note-success" style="height: 229px">
@@ -52,6 +58,7 @@
                                     <div class="col-md-5"></div>
                                     <div class="col-md-2">
                                     	<button type="button" class="btn blue" style="width: 100px;height: 53px;font-size: 2em;" id="btnNext">Next</button>
+                                    	<button type="button" class="btn blue" style="width: 100px;height: 53px;font-size: 2em; display:none;" id="btnEnd">Finish</button>
                                     </div>
                                 </div>
 

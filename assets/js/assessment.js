@@ -1,8 +1,9 @@
-$(document).ready(function(){	
-    $("#btnNext").click(nextEx);
-    $("#contador").click(cuentaRegresiva);
+$(document).ready(function(){		
     setFirstValues();
-    $("#btnNext").click(nextEx);
+    $("#btnNext").on("click",nextEx);
+    $("#contador").on("click",cuentaRegresiva);
+    $("#btnEnd").on("click",nextEx);
+    $("#btnEnd").on("click",finalReviewEx);
 });
 
 function cuentaRegresiva(){
@@ -26,7 +27,6 @@ function cuentaRegresiva(){
                         $contador.css("margin-left","20%")
                         		.text("Go!")
                         		.css("zoom", "4")
-                        		.$contador
                         		.css("opacity", "1");
                     }else if($($contador).text() > 0) {
                         $($contador).text($contador.text() - 1)
@@ -57,7 +57,7 @@ function setFirstValues(){
 		r+=                    '<label class="btn btn-default" i>+</label>';
 	    r+=             '<label class="btn btn-default value2">'+v.b+'</label>';
 	    r+=             '<label class="btn btn-default" i>=</label>';
-	    r+=             '<input type="text" class="btn btn-default result" style="width: 60px" resultado"'+v.result+'"/>';
+	    r+=             '<input type="text" class="btn btn-default result" style="width: 60px" resultado="'+v.result+'"/>';
 	    r+=         '</div>';
 	    r+=         '<div class="col-md-2"></div>';
 	    r+=     '</div>';
@@ -67,11 +67,19 @@ function setFirstValues(){
 
 function nextEx(){
 	
-		$activeEx 	= $(".active.ex");
-		$nextEx		= $activeEx.siblings().eq($activeEx.index());
-		$input		= $activeEx.find("input");
+		var $activeEx 	= $(".active.ex");
+		var $nextEx		= $activeEx.siblings().eq($activeEx.index());
+		var $input		= $activeEx.find("input");
+		var asdf = content.length-2;
+		var qwer = $activeEx.attr("number");
+		
+		if(asdf == qwer){
+			$("#btnNext").css("display","none");
+			$("#btnEnd").css("display","");
+		}
 		
 		if($activeEx .find("input").val() != ""){
+			reviewEx($input);
 			
 			$nextEx.css("position","relative")
 				   .css("left","355px")
@@ -106,9 +114,17 @@ function nextEx(){
 }
 
 function reviewEx(paramInput){
-	
+	var index = paramInput.parent().parent().attr("number");
+	if(paramInput.val() == paramInput.attr("resultado")){
+		content[index].sucess = true;
+	}else{
+		content[index].sucess = false;
+	}
 }
 
-function timeCounter(){
-	
+function finalReviewEx(){
+	$(".reload").click();
+	var p = function(){
+			
+	}
 }
