@@ -38,10 +38,11 @@ function cuentaRegresiva(){
                         $hiddenDiv.css("display","");
                         $(".result").focus();
                         $(".row.hiddenDiv").removeClass("hiddenDiv");
-                    }
+                    }                    
                 }
             });
         }
+        setTimeout(function(){createTimer("divRegresiva",duration*60,"btnEnd");},2500);;
     };
     setTimeout(p,600);
 }
@@ -145,7 +146,7 @@ function finalReviewEx(){
 				    if(v.success){
 				   		 r+=             '<input type="text" class="btn btn-default result" style="width: 60px;background-color: #f0f0f0;border-color: green;" enable="emable" value="'+v.result+'"/>'; 	
 				    }else{
-				    	 r+=             '<input type="text" class="btn btn-default result" style="width: 60px;background-color: #f0f0f0;border-color: red;" enable="emable" value="'+v.answer+'"/> '+v.result;
+				    	 r+=             '<input type="text" class="btn btn-default result" style="width: 60px;background-color: #f0f0f0;border-color: red;" enable="emable" value="'+(v.answer==undefined?"":v.answer)+'"/> '+v.result;
 				    }			   
 				    r+=         '</div>';
 				    r+=         '<div class="col-md-2"></div>';

@@ -37,6 +37,7 @@
 							</a>
 							<a href="" class="fullscreen">
 							</a>
+							<i class="fa" id="divRegresiva" ></i>
 						</div>
                     </div>
                     <div class="portlet-body" id="testBody" style="height: 255px">
