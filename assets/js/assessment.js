@@ -1,4 +1,6 @@
+var exit = false;
 $(document).ready(function(){		
+	$("body").addClass("page-full-width");
     setFirstValues();
     $("#btnNext").on("click",nextEx);
     $("#contador").on("click",cuentaRegresiva);
@@ -35,6 +37,7 @@ function cuentaRegresiva(){
                     }else{
                         $hiddenDiv.css("display","");
                         $(".result").focus();
+                        $(".row.hiddenDiv").removeClass("hiddenDiv");
                     }
                 }
             });
@@ -92,16 +95,16 @@ function nextEx(){
 			},{
 				complete:function(){
 					if($nextEx[0] != null){
-						$activeEx.css("display","none");
-						
+						$activeEx.css("display","none");						
 						$(".active").removeClass("active");
-						$nextEx.addClass("active").css("display","");
-						$nextEx.animate(
-							{
-								left:"",
-								opacity:"1"
-							}
-						);
+						$nextEx.addClass("active")
+							   .css("display","")
+							   .animate(
+									{
+										left:"",
+										opacity:"1"
+									}
+								);
 						$(".active").find("input").focus();
 					}else{
 						
@@ -116,15 +119,47 @@ function nextEx(){
 function reviewEx(paramInput){
 	var index = paramInput.parent().parent().attr("number");
 	if(paramInput.val() == paramInput.attr("resultado")){
-		content[index].sucess = true;
+		content[index].success = true;
 	}else{
-		content[index].sucess = false;
+		content[index].success = false;
+		content[index].answer = paramInput.val();
 	}
 }
 
 function finalReviewEx(){
-	$(".reload").click();
-	var p = function(){
-			
+	if(exit){
+		window.location = "/Edna/index.php/student_dashboard_controller/testReturn";
+	}else{
+		$(".reload").click();
+		var p = function(){
+				var $divExArea = $("#divExArea");
+				var r = "";
+				$.each(content,function(k,v){				
+					r+= '<div class="row">';			
+				    r+=         '<div class="col-md-2"></div>';
+				    r+=            '<div class="col-md-8" style="zoom:2;">';
+				    r+=             '<label class="btn btn-default value1">'+v.a+'</label>';
+					r+=                    '<label class="btn btn-default" i>+</label>';
+				    r+=             '<label class="btn btn-default value2">'+v.b+'</label>';
+				    r+=             '<label class="btn btn-default" i>=</label>';
+				    if(v.success){
+				   		 r+=             '<input type="text" class="btn btn-default result" style="width: 60px;background-color: #f0f0f0;border-color: green;" enable="emable" value="'+v.result+'"/>'; 	
+				    }else{
+				    	 r+=             '<input type="text" class="btn btn-default result" style="width: 60px;background-color: #f0f0f0;border-color: red;" enable="emable" value="'+v.answer+'"/> '+v.result;
+				    }			   
+				    r+=         '</div>';
+				    r+=         '<div class="col-md-2"></div>';
+				    r+= '</div><br>';
+				});
+				$("#testBody").css("height","")
+							  .children()
+							  .css("height","");
+				$(".hiddenDiv.ex").remove();
+				$divExArea.html(r);
+		};
+		setTimeout(p,800);
+		exit = true;
+		
+		$("#btnEnd").unbind("click",nextEx);
 	}
 }
