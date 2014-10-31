@@ -7,6 +7,8 @@ class assesment_creator_controller extends CI_Controller {
     function __construct() {
         parent::__construct();
 
+        $this->load->model("create_assessment_model");
+
     }
 
     public function index(){
@@ -21,7 +23,7 @@ class assesment_creator_controller extends CI_Controller {
 
     }
 
-    public function createAssessment(){
+    /*public function createAssessment(){
 
         $data = $this->input->post();
 
@@ -30,6 +32,24 @@ class assesment_creator_controller extends CI_Controller {
         print_r($data);
         echo "<br>";
         print_r($data['cmbCategory']);
+    }*/
+
+
+    public function getCategoryArray(){
+        $data = $this->create_assessment_model->getCategory();
+
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    }
+
+    public function getSubCategoryArray(){
+
+        $data['post'] = $this->input->post();
+
+        $result = $this->create_assessment_model->getSubCategory($data['post']);
+
+        header('Content-Type: application/json');
+        echo json_encode($result);
     }
 }
 

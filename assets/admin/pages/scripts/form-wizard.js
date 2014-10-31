@@ -21,7 +21,7 @@ var FormWizard = function () {
 
             // add the rule here
             $.validator.addMethod("valueNotEquals", function(value, element, arg){
-                return arg != value;
+                return error;
             }, "Value must not equal arg.");
 
             form.validate({
@@ -34,8 +34,10 @@ var FormWizard = function () {
                     cmbSubject: {
                         required: true,
                         valueNotEquals: "0"
+                    }
 
-                    }/*,
+
+                    /*,
                     password: {
                         minlength: 5,
                         required: true

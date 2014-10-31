@@ -50,33 +50,109 @@
     width: 90px;
     margin-left: -90px;
 }
-/*Overrides background color on step number in Wizard FOrm*/
-.form-wizard .steps > li.active > a.step .number {
-    background-color: #4b8df8;
-    color: #fff;
+
+
+
+/*------------------FORM WIZARD-------------------*/
+
+
+
+/*Overrides attributes of FORM WIZARD such as color and border etc...*/
+.portlet.box.blue > .portlet-title{
+    background-color: #d64635;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
 }
 
-/*Overrides background color on progress bar in Wizard Form*/
-.progress > .progress-bar-success {
-    background-color: #4b8df8;
+.portlet.box.blue{
+    border-color: #d64635;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
 }
 
 label{
-  color: #4b8df8;
+    color: #d64635;
 }
 
-#RadioButtons{
-    margin-left: 50px;
-    margin-top: 25px;
+.form-wizard .steps > li.active > a.step .number{
+    background-color: #d64635;
 }
 
-#Example{
-margin-right: 500px;
-margin-left: 150px;
+.form-wizard .steps > li.done > a.step .number {
+    background-color: #e5e5e5 ;
+    color: #e5e5e5;
 }
-#Text{
-    height: 40px;
+.form-wizard .steps > li > a.step > .number{
+    color:black;
+    background-color: #f7f7f7;
+
 }
-#Skill{
-    margin-right: 500px;
+
+.form-wizard .steps > li > a.step > .desc {
+    color: black;
+}
+
+.progress{
+    border: 1px solid #d64635;
+    border-radius: 8px !important;
+    background-color: white;
+}
+.progress > .progress-bar-success {
+    background-color: #d64635;
+    border-radius: 7px !important;
+}
+
+/*Overrides the change in border color to green when inputs are validated*/
+.has-success .form-control{
+    border-color: #e5e5e5;
+}
+
+#btnReset{
+    float:right;
+    border-radius: 4px !important;
+}
+
+#btnResetSkill{
+    float:right;
+    border-radius: 4px !important;
+}
+
+#divActions{
+    background-color: white;
+    border-color: white;
+}
+#btnContinue{
+    float: right;
+    background-color: #d64635;
+    border-radius: 5px !important;
+}
+
+#btnBack{
+    float: right;
+    background-color: white;
+}
+
+#btnCreate{
+    float:right;
+    background-color:white;
+    color: #b0b0b0;
+}
+
+#cmbSkill{
+    border-color: #f2f2f2;
+    border-radius: 7px !important;
+    /*Fix SCROLLBAR RADIUS*/
+}
+#txtExample{
+    font-size: 3em;
+    height: auto;
+    text-align: right;
+    border-radius: 7px !important;
+    background-color: #fcfcfc;
+    border-color: #f7f7f7;
+}
+
+
+.help-block {
+   font-size: 10px;
 }
