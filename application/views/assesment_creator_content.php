@@ -59,11 +59,19 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#tab3" data-toggle="tab" class="step active">
+                                    <a href="#tab3" data-toggle="tab" class="step">
 												<span class="number">
 												3 </span>
 												<span class="desc">
 												<i class="fa fa-check"></i> Setup </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#tab4" data-toggle="tab" class="step">
+												<span class="number">
+												4 </span>
+												<span class="desc">
+												<i class="fa fa-check"></i> Create </span>
                                     </a>
                                 </li>
 
@@ -138,15 +146,6 @@
                                                     <label id="lSkill"><b>Select a Skill</b></label>
                                                     <select class="form-control" name="cmbSkill" id="cmbSkill">
                                                         <option value="0">Select...</option>
-                                                        <option value="1">Addition - Simple</option>
-                                                        <option disabled="">------------</option>
-                                                        <option value="2">Adding one Digit to Two Digits</option>
-                                                        <option value="3">Number Bonds</option>
-                                                        <option value="4">Doubles</option>
-                                                        <option value="5">Add By...</option>
-                                                        <option disabled="">------------</option>
-                                                        <option value="6">Word Problems</option>
-                                                        <option value="7">Place Value</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -226,7 +225,7 @@
                                             <div class="form-group">
                                                 <label class="col-md-6 control-label">Set No. Limit</label>
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" id="tSetLim" placeholder="99">
+                                                    <input type="text" class="form-control" id="tSetLim"placeholder="99">
                                                     <span class="help-block">
 										            Hover for Details </span>
                                                 </div>
@@ -274,9 +273,7 @@
 
                                                 <div class="input-group col-md-3" style="width:14%; margin-left: 20px;">
                                                     <input type="text" class="form-control" style="min-width:60px;" placeholder="sec">
-                                                        <span class="input-group-addon" style="min-width:50px;">
-                                                            sec
-												        </span>
+
                                                 </div>
 
                                             </div>
@@ -294,21 +291,26 @@
                                             <div class="form-group">
 
 
-                                                <div class="checkbox-list col-md-offset-2 col-md-6">
+                                                <div class="checkbox-list col-md-offset-2 col-md-8">
                                                     <label style="margin-top: 7px;">
                                                         <div class="checker "><span><input type="checkbox"></span>
                                                         </div>
-                                                        Global
+                                                        Show Correct Answer
                                                     </label>
                                                     <label style="margin-top: 7px;">
                                                         <div class="checker "><span><input type="checkbox"></span>
                                                         </div>
-                                                        Global
+                                                        Show Total Score
                                                     </label>
                                                     <label style="margin-top: 7px;">
                                                         <div class="checker "><span><input type="checkbox"></span>
                                                         </div>
-                                                        Global
+                                                        Allow Review
+                                                    </label>
+                                                    <label style="margin-top: 7px;">
+                                                        <div class="checker "><span><input type="checkbox"></span>
+                                                        </div>
+                                                        Allow Retake
                                                     </label>
                                                 </div>
 
@@ -325,6 +327,34 @@
                                 </div>
 
                                 <div class="tab-pane" id="tab4">
+
+                                    <div class="form-group">
+
+                                        <div class="col-md-4">
+                                            <label class="col-md-offset-2" style="margin-bottom: 15px; font-size:18px;"><b>Copies</b></label>
+                                            <div class="form-group">
+                                                <div class="checkbox-list col-md-offset-2 col-md-8">
+                                                    <label style="margin-top: 7px;">
+                                                        <div class="checker "><span><input type="checkbox"></span>
+                                                        </div>
+                                                        Different Copies
+                                                    </label>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="col-md-6 col-md-offset-1 control-label" >Num. Copies</label>
+                                                <div class="col-md-3">
+                                                    <input type="text" class="form-control" id="tNumCopies" placeholder="3">
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
 
                                 </div>
 

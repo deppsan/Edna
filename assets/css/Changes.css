@@ -152,7 +152,14 @@ label{
     border-color: #f7f7f7;
 }
 
+#tSetLim{
+    border-radius: 4px !important;
+}
 
 .help-block {
    font-size: 10px;
+}
+
+#tNumCopies{
+    border-radius: 4px !important;
 }

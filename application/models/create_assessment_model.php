@@ -32,14 +32,30 @@ class Create_assessment_model extends CI_Model{
                 "Division"
             );
         }
-        else if($data['category'] == 2){
-            $subCategory = array(
-                "Addition and Subtraction",
-            );
 
-        }
 
         return $subCategory;
+
+    }
+
+    Public function getSkill($data){
+
+        if($data['subCategory'] == 1){
+            $skill = array(
+                "Addition - Simple",
+                "-----------------",
+                "Adding On Digit to Two Digits",
+                "Number Bonds",
+                "Doubles",
+                "Add By and Skip Counting",
+                "-----------------",
+                "Word Problems",
+                "Place Value"
+        );
+        }
+
+
+        return $skill;
 
     }
 

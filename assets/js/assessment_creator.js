@@ -4,7 +4,7 @@
 $(document).ready(function(){
     /*$('#form_wizard_1').find('.button-next').hide();*/
     $("#cmbCategory").change(getSubCategories);
-    $("#cmbSubCategory").change(cmbSubCategory);
+    $("#cmbSubCategory").change(getSkills);
     $("#btnReset").click(btnReset);
     $("#cmbSkill").change(cmbSkill);
     $("#btnContinue").click(btnContinue);
@@ -18,6 +18,7 @@ $(document).ready(function(){
 
     var $btnContinue        =   $("#btnContinue");
     $btnContinue.attr("disabled",true).css("background-color","white").css("color","#b0b0b0");
+
 
 
 
@@ -81,16 +82,31 @@ function getSubCategories(){
 }
 
 
-function cmbSubCategory(){
+function getSkills(){
 
     var $cmbSubCategory     =   $("#cmbSubCategory");
     var $lSubCategory       =   $("#lSubCategory");
     var $btnContinue        =   $("#btnContinue");
+    var $cmbSkill           =   $("#cmbSkill");
 
     if($cmbSubCategory.val() != 0) {
         $lSubCategory.css("color","#b0b0b0");
         $btnContinue.parent("div").parent("div").parent("div").css("border-color","#e5e5e5").attr("display","");
         $btnContinue.attr("disabled",false).css("background-color","#d64635").css("color","white");
+
+        $.ajax({
+            type	    : 'POST',
+            url		    : urlBase+"index.php/assesment_creator_controller/getSkillArray",
+            data        : 'subCategory='+$cmbSubCategory.val(),
+            dataType    : 'json',
+            async       : false,
+            success 	: function(data){
+                $.each(data,function(k,v){
+                    $cmbSkill.append('<option value="'+(k+1)+'">'+v+'</option>');
+                });
+            }
+        });
+
     }
     else{
         $btnContinue.attr("disabled",true).css("background-color","white").css("color","#b0b0b0");
