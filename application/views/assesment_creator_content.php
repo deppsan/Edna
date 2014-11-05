@@ -43,7 +43,7 @@
                         <div class="form-body" id="formBody">
                             <ul class="nav nav-pills nav-justified steps">
                                 <li class="active">
-                                    <a href="#tab1" data-toggle="tab" class="step">
+                                    <a href="#tab1" data-toggle="tab" class="step inactiveLink">
 												<span class="number">
 												1 </span>
 												<span class="desc">
@@ -51,7 +51,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#tab2" data-toggle="tab" class="step">
+                                    <a href="#tab2" data-toggle="tab" class="step inactiveLink">
 												<span class="number">
 												2 </span>
 												<span class="desc">
@@ -59,7 +59,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#tab3" data-toggle="tab" class="step">
+                                    <a href="#tab3" data-toggle="tab" class="step inactiveLink">
 												<span class="number">
 												3 </span>
 												<span class="desc">
@@ -67,7 +67,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#tab4" data-toggle="tab" class="step">
+                                    <a href="#tab4" data-toggle="tab" class="step inactiveLink">
 												<span class="number">
 												4 </span>
 												<span class="desc">
@@ -99,13 +99,13 @@
 
 
                                     <div class="form-group">
-                                        <div class="col-md-6">
+                                        <div class="col-md-5">
                                             <label id="" style="font-size: 30px; margin-left: 4% "><b>Math</b></label>
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <div class="col-md-6" style="margin-left: 4%">
+                                        <div class="col-md-5" style="margin-left: 4%">
                                             <label id="lCategory"><b>Select a Category</b></label>
                                             <select class="form-control" name="cmbCategory" id="cmbCategory">
                                                 <option value="0">Select..</option>
@@ -114,7 +114,7 @@
                                     </div>
 
                                     <div class="form-group" style="display:none;">
-                                        <div class="col-md-6" style="margin-left: 4%">
+                                        <div class="col-md-5" style="margin-left: 4%">
                                             <label name="lSubCategory" id="lSubCategory"><b>Select a Subcategory</b></label>
                                             <select class="form-control"  name="cmbSubCategory" id="cmbSubCategory">
                                                 <option value="0">Select...</option>
@@ -123,8 +123,8 @@
                                     </div>
 
                                     <div class="form-group" style="display:none;">
-                                        <div class="col-md-6" style="margin-left: 4%">
-                                            <button type="button" class="btn btn-default" name="btnReset" id="btnReset"><i class="fa fa-history"></i> Reset</button>
+                                        <div class="col-md-5" style="margin-left: 4%">
+                                            <button type="button" class="btn btn-default" name="btnResetCategory" id="btnResetCategory"><i class="fa fa-history"></i> Reset</button>
                                         </div>
                                     </div>
 
@@ -149,13 +149,11 @@
                                                     </select>
                                                 </div>
                                             </div>
-                                            <div id="SpSkill" class="form-group" style="display:none;">
-                                                <div class="col-md-12">
-                                                    <label id="lSpSkill"><b>Select Specific Skill</b></label>
-                                                    <select class="form-control" name="cmbSpSkill" id="cmbSpSkill">
+                                            <div id="SpeSkill" class="form-group" style="display:none;">
+                                                <div class="col-md-offset-1 col-md-11">
+                                                    <label id="lSpeSkill"><b>Select Specific Skill</b></label>
+                                                    <select class="form-control" name="cmbSpeSkill" id="cmbSpeSkill">
                                                         <option value="0">Select...</option>
-                                                        <option value="1">Build Equation</option>
-                                                        <option value="2">Missing Addends</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -181,7 +179,7 @@
                                             <div id="Example" class="form-group">
                                                 <div class="col-md-11">
                                                     <label style="float:right;"><b>Example</b></label>
-                                                    <textarea class="form-control" rows="3" readonly=""  name="txtExample" id="txtExample"> 5 + 2 = 7 </textarea >
+                                                    <textarea class="form-control" rows="3" readonly=""  name="txtExample" id="txtExample"> --- </textarea >
                                                 </div>
                                             </div>
                                         </div>
@@ -194,13 +192,13 @@
 
                                     <div class="form-group">
 
-                                        <div class="col-md-4">
+                                        <div class="col-md-5">
                                             <label class="col-md-offset-2" style="margin-bottom: 30px; font-size:18px;"><b>Assessment Setup</b></label>
 
                                             <div class="form-group">
-                                                <label class="col-md-6 control-label">No. Exercises</label>
+                                                <label class="col-md-6 control-label">Num. Exercises</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control">
+                                                    <select class="form-control" name="cmbNumExercises" id="cmbNumExercises">
                                                         <option>5</option>
                                                         <option>10</option>
                                                         <option>15</option>
@@ -210,9 +208,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-6 control-label">No. Digits</label>
+                                                <label class="col-md-6 control-label">Num. Digits</label>
                                                 <div class="col-md-6">
-                                                    <select class="form-control">
+                                                    <select class="form-control" name="cmbNumDigits" id="cmbNumDigits">
                                                         <option>1</option>
                                                         <option>2</option>
                                                         <option>3</option>
@@ -223,9 +221,9 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <label class="col-md-6 control-label">Set No. Limit</label>
+                                                <label class="col-md-6 control-label">Set Num. Limit</label>
                                                 <div class="col-md-5">
-                                                    <input type="text" class="form-control" id="tSetLim"placeholder="99">
+                                                    <input type="text" class="form-control" name="txtSetLimit" id="txtSetLimit"placeholder="99">
                                                     <span class="help-block">
 										            Hover for Details </span>
                                                 </div>
@@ -233,25 +231,25 @@
                                         </div>
 
 
-                                        <div class="col-md-8">
+                                        <div class="col-md-7">
                                             <label class="col-md-offset-1" style="margin-bottom: 30px; font-size:18px;"><b>Time Options</b></label>
 
 
                                             <div class="form-group" style="margin-bottom: 0;">
-                                                <div class="col-md-offset-1 col-md-2">
-                                                    <label class="control-label" style="margin-bottom: 10px; font-weight: bold;">Time Limit</label>
+                                                <div class="col-md-offset-1 col-md-3">
+                                                    <label class="control-label" style="margin-bottom: 10px; font-weight: bold; float:right;">Time Limit</label>
                                                 </div>
 
-                                                <div class="checkbox-list col-md-3" style="width: 22%;">
+                                                <div class="checkbox-list col-md-3" style="width: 24%;">
                                                     <label style="margin-bottom: 20px; margin-top: 7px;">
-                                                        <div class="checker "><span><input type="checkbox"></span>
+                                                        <div class="checker"><span><input type="checkbox"></span>
                                                         </div>
                                                         Global
                                                     </label>
                                                 </div>
 
                                                 <div class="input-group col-md-3" style="width:14%; margin-left: 20px;">
-                                                    <input type="text" class="form-control" style="min-width:60px;" placeholder="min">
+                                                    <input type="text" class="form-control" id="txtTimeLimitGlobal" style="min-width:60px;" placeholder="min">
                                                         <span class="input-group-addon" style="min-width:50px;">
                                                             min
 												        </span>
@@ -263,7 +261,7 @@
 
 
                                             <div class="form-group">
-                                                <div class="checkbox-list col-md-offset-3 col-md-3" style="width: 22%;">
+                                                <div class="checkbox-list col-md-offset-4 col-md-3" style="width: 24%;">
                                                     <label style="margin-bottom: 20px; margin-top: 7px;">
                                                         <div class="checker "><span><input type="checkbox"></span>
                                                         </div>
@@ -272,7 +270,10 @@
                                                 </div>
 
                                                 <div class="input-group col-md-3" style="width:14%; margin-left: 20px;">
-                                                    <input type="text" class="form-control" style="min-width:60px;" placeholder="sec">
+                                                    <input type="text" class="form-control" id="txtTimeLimitPerExercise" style="min-width:60px;" placeholder="sec">
+                                                    <span class="input-group-addon" style="min-width:50px;">
+                                                            sec
+												    </span>
 
                                                 </div>
 
@@ -291,7 +292,7 @@
                                             <div class="form-group">
 
 
-                                                <div class="checkbox-list col-md-offset-2 col-md-8">
+                                                <div class="checkbox-list col-md-offset-3 col-md-8">
                                                     <label style="margin-top: 7px;">
                                                         <div class="checker "><span><input type="checkbox"></span>
                                                         </div>

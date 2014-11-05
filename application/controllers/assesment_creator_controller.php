@@ -61,6 +61,16 @@ class assesment_creator_controller extends CI_Controller {
         header('Content-Type: application/json');
         echo json_encode($result);
     }
+
+    public function getSpeSkillArray(){
+
+        $data['post'] = $this->input->post();
+
+        $result = $this->create_assessment_model->getSpeSkill($data['post']);
+
+        header('Content-Type: application/json');
+        echo json_encode($result);
+    }
 }
 
 ?>

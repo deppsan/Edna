@@ -195,7 +195,7 @@ var FormWizard = function () {
                     $('#form_wizard_1').find('.button-next').show();
                     $('#form_wizard_1').find('.button-submit').hide();
                 }
-                Metronic.scrollTo($('.page-title'));
+                Metronic.scrollTo($('.portlet-title'));  /*  .page-title   */
             }
 
             // default form wizard

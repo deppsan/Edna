@@ -107,7 +107,7 @@ label{
     border-color: #e5e5e5;
 }
 
-#btnReset{
+#btnResetCategory{
     float:right;
     border-radius: 4px !important;
 }
@@ -152,9 +152,16 @@ label{
     border-color: #f7f7f7;
 }
 
-#tSetLim{
+
+#txtSetLimit{
     border-radius: 4px !important;
 }
+
+#txtTimeLimitGlobal,#txtTimeLimitPerExercise{
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
 
 .help-block {
    font-size: 10px;
@@ -162,4 +169,15 @@ label{
 
 #tNumCopies{
     border-radius: 4px !important;
+}
+
+
+/*------------------------------------------------CLASSES-------------------------------------------------*/
+
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+}
+
+
 }
