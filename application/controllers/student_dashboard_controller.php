@@ -1,5 +1,5 @@
 <?php
-//include('../../system/libraries/class/Assessment.php');
+//include('../../system/libraries/class/AssessmentDTO.php');
 class student_dashboard_controller extends CI_Controller {
         
         function __construct() {
@@ -28,7 +28,7 @@ class student_dashboard_controller extends CI_Controller {
 			
 			$this->generator->fillAssessment();
 			
-			$assessment = new Assessment();
+			$assessment = new AssessmentDTO();
 			$assessment = $this->generator->getAssesment();
 
 			$data['assessment'] = $assessment;

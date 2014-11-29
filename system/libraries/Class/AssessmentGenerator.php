@@ -8,7 +8,7 @@
 	 * Last UpDate	: April 4 2014
 	 */
 	include("OperationsExercisesGenerator.php");
-	include("Assessment.php");
+	include("AssessmentDTO.php");
 	class AssessmentGenerator{
 		
 		private $assessment;
@@ -20,7 +20,7 @@
 		 * Class Constructor.
 		 * */
 		public function AssessmentGenerator($data){
-			$this->assessment 		=	new Assessment();
+			$this->assessment 		=	new AssessmentDTO();
 			$this->assessment->setType($data['type']);
 			$this->assessment->setSkill($data['skill']);
 			$this->assessment->setAssessmentDuration($data['assessmentDuration']);
@@ -28,11 +28,7 @@
 			$this->exerciseAmount 	=	$data['exerciseAmount'];
 			$this->numberLong		=	$data['numberLong'];
 			
-			if($data['skill'] == 1 OR $data['skill'] == 2 OR $data['skill'] == 3 OR $data['skill'] == 4){
-				$this->exerciseCreator	=	new OperationsExercisesGenerator($data['numberLong']);
-			}else{
-				//Hace otra clase de ejercicios
-			}
+			
 		}
 		
 		/**
@@ -46,6 +42,13 @@
 		 * Fill an assesment with an amount of excersice
 		 */
 		public function fillAssessment(){
+			
+			if($data['skill'] == 1 OR $data['skill'] == 2 OR $data['skill'] == 3 OR $data['skill'] == 4){
+				$this->exerciseCreator	=	new OperationsExercisesGenerator($this->numberLong);
+			}else{
+				//Hace otra clase de ejercicios
+			}
+			
 			$excersice = array();			
 			for ($i=0; $i < $this->exerciseAmount ; $i++) {
 				$excersice[$i] = $this->exerciseCreator->makeExcercise($this->assessment->getSkill());		
